@@ -3,7 +3,7 @@ import axios from 'axios';
 import Cryptocurrency from './Cryptocurrency';
 import Error from './Error';
 
-function Form() {
+function Form({setCurrency, setCryptomoneda}) {
 
     const [cryptocurrency, setCryptocurrency] = useState([]);
     const [currencyQuote, setCurrencyQuote] = useState('');
@@ -36,6 +36,9 @@ function Form() {
 
         //pasar los datos al componente principal
         setError(false);
+        setCurrency(currencyQuote);
+        setCryptomoneda(cryptoQuote);
+        
     }
 
     //mostrar el error en caso de que exista
