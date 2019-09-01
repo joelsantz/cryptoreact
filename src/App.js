@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import image from './cryptomonedas.png';
+import Form from './components/Form';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className = "row">
+        <div className = "one-half column">
+          <img src = {image} alt = "crypto" className = "logotipo" />
+        </div>
+        <div className = "one-half column">
+          <h1>Cryptocurrency right now!</h1>
+
+          <Form/>
+        </div>
+      </div>
     </div>
   );
 }
